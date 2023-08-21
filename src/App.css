@@ -3,4 +3,10 @@
     padding: 20px;
 }
   
- 
+.months {
+    display: flex;
+    width: 848px;
+    height: 15px;
+    margin: 0 165px;
+    padding-bottom: 5px;
+}

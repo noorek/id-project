@@ -23,9 +23,11 @@ function App() {
 
   return (
     <div className='App'>
-      {months.map((_, index) => (
-        <Month key={index} index={index} />
-      ))}
+      <div className='months'>
+        {months.map((_, index) => (
+          <Month key={index} index={index} />
+        ))}
+      </div>
 
       <ContributionGraph contributionData={contributionData} />
     </div>
