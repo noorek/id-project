@@ -1,19 +1,19 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 .graph-container {
     display: grid;
     grid-template-columns: repeat(51, 15px); /* 7 столбцов для каждого дня недели */
     gap: 2px;
-    place-content: center;
     padding: 5px;
     height: 107px;
+    position: relative;
   }
 
 
   .cell {
     width: 15px;
     height: 15px;
-    background-color: rgb(255, 0, 0);
-    display: inline-block;
-
   }
 
   .cell:hover {
@@ -23,6 +23,7 @@
   .container {
     display: flex;
     justify-content: center;
+    
   }
 
   .weekdays {
@@ -31,4 +32,28 @@
     width: 18px;
     padding-right: 5px;
     height: 81px;
+  }
+
+  .cell::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background-color: black;
+    border-radius: 3px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all .7s;
+    padding: 7px 12px;
+    font-size: 10px;
+    
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+  }
+
+  .cell:hover::after {
+    opacity: 1;
+    z-index: 10;
   }
