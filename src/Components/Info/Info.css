@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.info-cell {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-color: rgb(255, 0, 0);
+    margin-right: 2px;
+}
+.info {
+    color: #959494;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin: 0 180px;
+    padding-top: 15px;
+}
+
+.info-cells {
+    padding: 0px 10px;
+}

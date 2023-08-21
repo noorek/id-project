@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from "react"
 import "./App.css"
-import ContributionGraph from "./Components/Timeline/ContributionGraph"
+import ContributionGraph from "./Components/Contribution/ContributionGraph"
 import axios from "axios"
 import Month from "./Components/Month/Month"
 import Weekday from "./Components/Weekday/Weekday"
+import Info from "./Components/Info/Info"
 
 function App() {
   const months = Array.from(new Array(12))
@@ -30,6 +31,7 @@ function App() {
       </div>
 
       <ContributionGraph contributionData={contributionData} />
+      <Info />
     </div>
   )
 }
