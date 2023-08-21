@@ -1,9 +1,10 @@
 .graph-container {
     display: grid;
     grid-template-columns: repeat(51, 15px); /* 7 столбцов для каждого дня недели */
-    gap: 3px;
+    gap: 2px;
     place-content: center;
-    padding: 20px;
+    padding: 5px;
+    height: 107px;
   }
 
 
@@ -12,4 +13,17 @@
     height: 15px;
     background-color: rgb(255, 0, 0);
     display: inline-block;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .weekdays {
+    display: inline-flex;
+    flex-direction: column;
+    width: 18px;
+    padding-right: 5px;
+    height: 81px;
   }

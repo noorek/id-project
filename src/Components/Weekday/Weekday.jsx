@@ -1,4 +1,5 @@
 import React from "react"
+import "./Weekday.css"
 
 const DayNames = {
   1: "Пн",
@@ -6,7 +7,7 @@ const DayNames = {
   5: "Пт",
 }
 
-const Weekday = (index) => {
+const Weekday = ({index}) => {
   return <div className='weekday'>{DayNames[index]}</div>
 }
 
