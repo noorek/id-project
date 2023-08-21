@@ -6,7 +6,34 @@
     display: inline-block;
     background-color: rgb(255, 0, 0);
     margin-right: 2px;
+
+    position: relative;
 }
+.info-cell:hover {
+    border: 1px solid rgba(0, 0, 0, 0.507);
+  }
+
+  .info-cell::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background-color: black;
+    padding: 3px 5px;
+    border-radius: 3px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all .7s;
+    padding: 5px 9px;
+    
+  }
+
+  .info-cell:hover::after {
+    opacity: 1;
+  }
+
 .info {
     color: #959494;
     font-size: 8px;

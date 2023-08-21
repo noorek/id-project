@@ -45,6 +45,7 @@ const ContributionGraph = ({contributionData}) => {
               <div
                 key={formattedDate}
                 className='cell'
+                data-tooltip={`${count} contributions`}
                 style={{backgroundColor: getColor(count)}}></div>
             )
           },

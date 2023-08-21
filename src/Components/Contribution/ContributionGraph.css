@@ -13,6 +13,11 @@
     height: 15px;
     background-color: rgb(255, 0, 0);
     display: inline-block;
+
+  }
+
+  .cell:hover {
+    border: 1px solid rgba(0, 0, 0, 0.507);
   }
 
   .container {
