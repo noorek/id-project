@@ -1,14 +1,15 @@
-.cell {
-    width: 15px;
-    height: 15px;
-    background-color: lightgray;
-    display: inline-block;
-}
-
-.timeline {
+.graph-container {
     display: grid;
     grid-template-columns: repeat(51, 15px); /* 7 столбцов для каждого дня недели */
     gap: 3px;
     place-content: center;
     padding: 20px;
-}
+  }
+
+
+  .cell {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(255, 0, 0);
+    display: inline-block;
+  }

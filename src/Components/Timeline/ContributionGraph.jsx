@@ -1,20 +1,21 @@
 import React from "react"
+import "./ContributionGraph.css"
 
 const ContributionGraph = ({contributionData}) => {
-  const startDate = new Date("2022-05-31") // Начальная дата для графика
-  const endDate = new Date("2023-08-31") // Конечная дата для графика
+  const startDate = new Date("2022-08-30") // Начальная дата для графика
+  const endDate = new Date("2023-08-21") // Конечная дата для графика
 
   function getColor(count) {
-    if (count >= 20) {
-      return "#196127" // Зеленый
-    } else if (count >= 10) {
-      return "#239a3b" // Зеленый
-    } else if (count >= 5) {
-      return "#7bc96f" // Светло-зеленый
-    } else if (count >= 1) {
-      return "#c6e48b" // Еще светлее зеленый
+    if (count >= 30) {
+      return "#254E77"
+    } else if (count >= 20 && count <= 29) {
+      return "#527BA0"
+    } else if (count >= 10 && count <= 19) {
+      return "#7FA8C9"
+    } else if (count >= 1 && count <= 9) {
+      return "#ACD5F2"
     } else {
-      return "lightgray" // Серый для нулевых вкладов
+      return "#EDEDED"
     }
   }
 
@@ -26,7 +27,10 @@ const ContributionGraph = ({contributionData}) => {
           const currentDate = new Date(startDate)
           currentDate.setDate(currentDate.getDate() + index)
           const formattedDate = currentDate.toISOString().split("T")[0]
-          const count = contributionData[formattedDate] || 0
+          const contributionEntry = contributionData.find(
+            (entry) => entry.date === formattedDate,
+          )
+          const count = contributionEntry ? contributionEntry.count : 0
 
           return (
             <div
